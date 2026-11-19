@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Paired bootstrap for the calibrated signed gate}
+\label{tab:paired_bootstrap}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Benchmark} & \textbf{Metric} & \textbf{Difference} & \textbf{95\% interval} & \textbf{Resampling unit} \\
+\midrule
+Bike Sharing & RMSE & +0.505 & [-0.050, +1.079] & Calendar week (n=22) \\
+Letter Recognition & Accuracy points & +0.000 & [+0.000, +0.000] & Feature group (n=3732) \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{minipage}{0.98\linewidth}\footnotesize Seed 17 only, with 2,400 paired resamples of weeks or identical-feature groups. Intervals describe sampling variation in this split. Repeated-split variability appears in the other tables.\end{minipage}
+\end{table}

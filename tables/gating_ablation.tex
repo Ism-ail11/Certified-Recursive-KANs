@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Paired differences against the fixed-gain anchor}
+\label{tab:gating_ablation}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Gate variant} & \textbf{Bike \ensuremath{\Delta} RMSE} & \textbf{Bike gate on} & \textbf{Letter \ensuremath{\Delta} pp} & \textbf{Letter gate on} \\
+\midrule
+Learned constant gains & -0.878 \ensuremath{\pm} 1.413 & 3/5 & 0.000 \ensuremath{\pm} 0.000 & 1/5 \\
+Contextual reciprocal gains & -1.358 \ensuremath{\pm} 1.909 & 3/5 & 0.010 \ensuremath{\pm} 0.022 & 1/5 \\
+Signed context, full strength & -2.684 \ensuremath{\pm} 2.032 & 5/5 & 0.045 \ensuremath{\pm} 0.089 & 5/5 \\
+Calibrated signed context & -1.659 \ensuremath{\pm} 2.530 & 3/5 & 0.000 \ensuremath{\pm} 0.018 & 2/5 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{minipage}{0.98\linewidth}\footnotesize Each difference uses the same frozen predictor. Negative RMSE differences and positive accuracy differences favor the gate. Gate on counts seeds with a nonzero selected strength, or a forced full-strength evaluation.\end{minipage}
+\end{table}

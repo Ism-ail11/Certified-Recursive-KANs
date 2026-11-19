@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Held-out predictive performance and certification}
+\label{tab:main_results}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Model} & \textbf{Bike RMSE} & \textbf{Letter acc. (\%)} & \textbf{Letter F1 (\%)} & \textbf{Min. certified (\%)} \\
+\midrule
+Standard cubic KAN & 77.35 \ensuremath{\pm} 4.49 & 95.91 \ensuremath{\pm} 0.28 & 95.90 \ensuremath{\pm} 0.28 & \textemdash{} \\
+Fixed-gain anchor & 80.61 \ensuremath{\pm} 7.96 & 95.77 \ensuremath{\pm} 0.30 & 95.75 \ensuremath{\pm} 0.32 & 100.0 \\
+Original reciprocal gate & 81.73 \ensuremath{\pm} 6.72 & 95.89 \ensuremath{\pm} 0.17 & 95.87 \ensuremath{\pm} 0.17 & 100.0 \\
+Learned constant gains & 79.74 \ensuremath{\pm} 6.96 & 95.77 \ensuremath{\pm} 0.30 & 95.75 \ensuremath{\pm} 0.32 & 100.0 \\
+Contextual reciprocal gains & 79.26 \ensuremath{\pm} 7.00 & 95.78 \ensuremath{\pm} 0.29 & 95.76 \ensuremath{\pm} 0.31 & 100.0 \\
+Signed context, full strength & 77.93 \ensuremath{\pm} 6.84 & 95.82 \ensuremath{\pm} 0.25 & 95.80 \ensuremath{\pm} 0.26 & 100.0 \\
+Calibrated signed context & 78.95 \ensuremath{\pm} 6.32 & 95.77 \ensuremath{\pm} 0.30 & 95.75 \ensuremath{\pm} 0.31 & 100.0 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{minipage}{0.98\linewidth}\footnotesize Larger-task means \ensuremath{\pm} sample standard deviations across five initialization or split seeds. The final column gives the lowest test certification rate across both tasks at a hidden-state error tolerance of \ensuremath{10^{-5}}.\end{minipage}
+\end{table}

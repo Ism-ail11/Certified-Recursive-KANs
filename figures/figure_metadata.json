@@ -1,0 +1,14 @@
+{
+  "bike_geometry_seed": 17,
+  "bike_geometry_strength": 1.0,
+  "letter_tsne": {
+    "seed": 17,
+    "samples": 572,
+    "representations": 1144,
+    "perplexity": 32,
+    "trustworthiness_2d": 0.9926910236217211,
+    "trustworthiness_3d": 0.9975244750067052,
+    "calibrated_strength_for_context": 0.0
+  },
+  "png_dpi": 300
+}

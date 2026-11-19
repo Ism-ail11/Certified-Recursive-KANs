@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{CPU inference and trainable parameter counts}
+\label{tab:cpu_and_parameters}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Model} & \textbf{Bike ms / row} & \textbf{Letters ms / row} & \textbf{Bike parameters} & \textbf{Letter parameters} \\
+\midrule
+Standard cubic KAN & 0.045 \ensuremath{\pm} 0.002 & 0.044 \ensuremath{\pm} 0.001 & 44,416 & 51,161 \\
+Fixed-gain anchor & 0.062 \ensuremath{\pm} 0.002 & 0.064 \ensuremath{\pm} 0.002 & 45,010 & 52,438 \\
+Original reciprocal gate & 0.067 \ensuremath{\pm} 0.003 & 0.063 \ensuremath{\pm} 0.003 & 45,044 & 52,472 \\
+Learned constant gains & 0.063 \ensuremath{\pm} 0.005 & 0.063 \ensuremath{\pm} 0.002 & 45,044 & 52,472 \\
+Contextual reciprocal gains & 0.062 \ensuremath{\pm} 0.002 & 0.064 \ensuremath{\pm} 0.004 & 45,855 & 53,271 \\
+Signed context, full strength & 0.065 \ensuremath{\pm} 0.003 & 0.062 \ensuremath{\pm} 0.001 & 46,076 & 53,492 \\
+Calibrated signed context & 0.070 \ensuremath{\pm} 0.014 & 0.063 \ensuremath{\pm} 0.005 & 46,076 & 53,492 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{minipage}{0.98\linewidth}\footnotesize Latencies include feature extraction, solver, and bounds, and use warm, single-thread CPU batches of up to 128. Values show the mean \ensuremath{\pm} standard deviation of per-seed medians from three repeats on up to 1,024 test rows.\end{minipage}
+\end{table}

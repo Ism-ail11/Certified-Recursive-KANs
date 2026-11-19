@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Recovery of known directional feedback}
+\label{tab:controlled_feedback}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Gate variant} & \textbf{Switching RMSE} & \textbf{Sign agreement (\%)} & \textbf{Fixed RMSE} & \textbf{Fixed strength} \\
+\midrule
+Fixed gains & 1.1679 \ensuremath{\pm} 0.0068 & \textemdash{} & 0 (roundoff) & 0.000 \ensuremath{\pm} 0.000 \\
+Learned constant gains & 0.9401 \ensuremath{\pm} 0.0022 & 49.52 \ensuremath{\pm} 0.31 & 0 (roundoff) & 0.000 \ensuremath{\pm} 0.000 \\
+Contextual reciprocal gains & 0.8693 \ensuremath{\pm} 0.0148 & 50.55 \ensuremath{\pm} 1.18 & 0 (roundoff) & 0.000 \ensuremath{\pm} 0.000 \\
+Signed context, full strength & 0.0392 \ensuremath{\pm} 0.0042 & 99.57 \ensuremath{\pm} 0.08 & 0.0006 \ensuremath{\pm} 0.0000 & 1.000 \ensuremath{\pm} 0.000 \\
+Calibrated signed context & 0.0392 \ensuremath{\pm} 0.0042 & 99.57 \ensuremath{\pm} 0.08 & 0 (roundoff) & 0.000 \ensuremath{\pm} 0.000 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{minipage}{0.98\linewidth}\footnotesize Targets use known fixed or sign-changing feedback. These are controlled mechanism tests. Inputs and equations are held fixed across gate variants. Mean \ensuremath{\pm} sample standard deviation over three seeds.\end{minipage}
+\end{table}
